@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <div class="menu">
+      <h2>To-do!</h2>
+      <ul class="nav nav-pills">
+        <li><a href="/index">Home</a></li>
+        <li class="active"><a href="/tasks">Todo List</a></li>
+        <li><a href="/tasks">Completed</a></li>
+      </ul>
+    </div>
+    <div id="item">
+      <input type="text" name="todo">
+      <script>
+        let items = [
+          'Do to-do list',
+          'Do database'
+        ]
+        function makeList(items) {
+          let list = document.createElement('ul');
+          for (let item in items) {
+            let el = document.createElement('li')
+            el.appendChild(document.createTextNode(items[item]))
+            list.appendChild(el);
+          }
+          return list
+        }
+        document.getElementById('item').appendChild(makeList(items))
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,5 +1,6 @@
 /* GET home page. */
+const path = require('path')
 
 exports.index = function (req, res) {
-  res.render('index', { title: 'Todo App' })
+  res.sendFile(path.join(__dirname, '../views/index.html'))
 }

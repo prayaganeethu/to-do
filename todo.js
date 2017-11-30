@@ -1,13 +1,11 @@
 const express = require('express')
-const path = require('path')
 const routes = require('./routes')
-
+const tasks = require('./routes/tasks')
 const app = express()
 
-const PORT = process.env.PORT || 8080
-
-app.use(express.static(path.join(__dirname, '/views')))
+const PORT = process.env.PORT || 8081
 
 app.get('/', routes.index)
+app.get('/tasks', tasks.list)
 
 app.listen(PORT, () => console.log('Express listening on port ', PORT))
