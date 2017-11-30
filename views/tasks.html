@@ -13,24 +13,25 @@
         <li><a href="/tasks">Completed</a></li>
       </ul>
     </div>
-    <div id="item">
-      <input type="text" name="todo">
-      <script>
-        let items = [
-          'Do to-do list',
-          'Do database'
-        ]
-        function makeList(items) {
-          let list = document.createElement('ul');
-          for (let item in items) {
-            let el = document.createElement('li')
-            el.appendChild(document.createTextNode(items[item]))
-            list.appendChild(el);
-          }
-          return list
-        }
-        document.getElementById('item').appendChild(makeList(items))
-      </script>
+    <div id="item" class="input">
+      <input id="text" class="text" type="text" name="todo">
     </div>
   </body>
+  <script>
+    let items = []
+    const node = document.getElementById('text');
+    node.addEventListener('keydown', function(event) {
+      if (event.key === "Enter") {
+        let item = document.getElementById("text").value
+        items.push(item)
+        console.log(items)
+        document.getElementById('item').appendChild(makeItem(item))
+      }
+    })
+    function makeItem(item) {
+      let el = document.createElement('li')
+      el.appendChild(document.createTextNode(item))
+      return el
+    }
+  </script>
 </html>
