@@ -63,4 +63,3 @@ app.js
 /public/stylesheets/style.css
 /routes/users.js
 /views/error.jade
-/views/layout.jade

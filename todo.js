@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 8080
 
 app.set('views', path.join(__dirname, '/views'))
 app.set('view engine', 'jade')
+
 app.get('/', routes.index)
 
-app.listen(PORT, () => console.log('To-do app listening on port ', PORT))
+app.listen(PORT, () => console.log('Express listening on port ', PORT))
