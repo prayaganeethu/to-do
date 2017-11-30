@@ -60,6 +60,3 @@ typings/
 # sample app
 app.js
 /bin/www
-/public/stylesheets/style.css
-/routes/users.js
-/views/error.jade
