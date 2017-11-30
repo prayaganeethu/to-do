@@ -61,6 +61,6 @@ typings/
 app.js
 /bin/www
 /public/stylesheets/style.css
-/routes/index.js
 /routes/users.js
-/views/*.jade
+/views/error.jade
+/views/layout.jade
