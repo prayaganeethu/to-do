@@ -5,6 +5,8 @@ const app = express()
 
 const PORT = process.env.PORT || 8081
 
+app.use(express.static('public'))
+
 app.get('/', routes.index)
 app.get('/tasks', tasks.list)
 

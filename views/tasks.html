@@ -2,13 +2,18 @@
 <html>
   <head>
     <title></title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
+  <script>
+   let link = document.createElement('link')
+   link.setAttribute('rel', 'stylesheet')
+   link.setAttribute('href',  '/stylesheets/style.css')
+   document.head.appendChild(link)
+   </script>
     <div class="menu">
       <h2>To-do!</h2>
       <ul class="nav nav-pills">
-        <li><a href="/index">Home</a></li>
+        <li><a href="/tasks">Home</a></li>
         <li class="active"><a href="/tasks">Todo List</a></li>
         <li><a href="/tasks">Completed</a></li>
       </ul>
@@ -30,9 +35,18 @@
       }
     })
     function makeItem(item) {
-      let el = document.createElement('li')
-      el.appendChild(document.createTextNode(item))
-      return el
+      let node = document.createElement('li')
+      let checkbox = document.createElement('input')
+      checkbox.type = "checkbox"
+      checkbox.name = "name"
+      checkbox.value = "value"
+      checkbox.id = "id"
+      let label = document.createElement('label')
+      label.htmlFor = "id"
+      label.appendChild(document.createTextNode(item))
+      node.appendChild(checkbox)
+      node.appendChild(label)
+      return node
     }
   </script>
 </html>

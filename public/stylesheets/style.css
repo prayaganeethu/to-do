@@ -7,3 +7,7 @@ a {
   text-align: left;
   width: 800px;
 }
+
+li {
+  list-style-type: none;
+}
