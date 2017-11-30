@@ -23,6 +23,7 @@
     node.addEventListener('keydown', function(event) {
       if (event.key === "Enter") {
         let item = document.getElementById("text").value
+        document.getElementById("text").value = ''
         items.push(item)
         console.log(items)
         document.getElementById('item').appendChild(makeItem(item))
