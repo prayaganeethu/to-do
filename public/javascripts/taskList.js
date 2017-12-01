@@ -1,4 +1,5 @@
 let items = []
+let done = []
 
 const node = document.getElementById('text')
 
@@ -7,7 +8,7 @@ node.addEventListener('keydown', function (event) {
     let item = document.getElementById('text').value
     document.getElementById('text').value = ''
     items.push(item)
-    document.getElementById('item').appendChild(makeItem(item))
+    document.getElementById('tasks').appendChild(makeItem(item))
   }
 })
 
@@ -19,8 +20,17 @@ function makeItem (item) {
   checkbox.class = 'check'
   checkbox.value = 'value'
   checkbox.id = item
+  checkbox.addEventListener('click', function (event) {
+    let id = event.target.id
+    done.push(id)
+    document.getElementById('tasks').removeChild(event.target.parentElement)
+  })
   let label = document.createElement('label')
+  label.id = 'label'
   label.htmlFor = 'id'
+  label.addEventListener('click', function (event) {
+    node.removeChild(event.target)
+  })
   label.appendChild(document.createTextNode(item))
   node.appendChild(checkbox)
   node.appendChild(label)
