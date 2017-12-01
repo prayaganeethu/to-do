@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>To do list</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
   </head>
   <body>
-  <script>
-   let link = document.createElement('link')
-   link.setAttribute('rel', 'stylesheet')
-   link.setAttribute('href',  '/stylesheets/style.css')
-   document.head.appendChild(link)
-   </script>
     <div class="menu">
       <h2>To-do!</h2>
       <ul class="nav nav-pills">
@@ -22,31 +17,5 @@
       <input id="text" class="text" type="text" name="todo">
     </div>
   </body>
-  <script>
-    let items = []
-    const node = document.getElementById('text');
-    node.addEventListener('keydown', function(event) {
-      if (event.key === "Enter") {
-        let item = document.getElementById("text").value
-        document.getElementById("text").value = ''
-        items.push(item)
-        console.log(items)
-        document.getElementById('item').appendChild(makeItem(item))
-      }
-    })
-    function makeItem(item) {
-      let node = document.createElement('li')
-      let checkbox = document.createElement('input')
-      checkbox.type = "checkbox"
-      checkbox.name = "name"
-      checkbox.value = "value"
-      checkbox.id = "id"
-      let label = document.createElement('label')
-      label.htmlFor = "id"
-      label.appendChild(document.createTextNode(item))
-      node.appendChild(checkbox)
-      node.appendChild(label)
-      return node
-    }
-  </script>
+  <script type="text/javascript" src="/taskList.js"></script>
 </html>
