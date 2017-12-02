@@ -5,11 +5,17 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
   </head>
   <body>
-    <div id="item" class="input">
-      <input id="text" class="text" type="text" name="todo" placeholder="Add a to-do">
-    </div>
-    <div id="tasks" class="tasks">
+    <div id="todo" class="input">
+      <div id="add">
+        <input id="text" class="text" type="text" name="todo" placeholder="Add a to-do">
+      </div>
+      <div id="tasks" class="tasks">
+      </div>
+      <div id="done">
+        <button id="show" type="button">My completed To-dos</button>
+      </div>
     </div>
   </body>
   <script type="text/javascript" src="/taskList.js"></script>
+  <script type="text/javascript" src="/tasksDone.js"></script>
 </html>
