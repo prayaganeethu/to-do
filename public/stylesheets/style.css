@@ -20,6 +20,26 @@ a {
   z-index: 1
 }
 
+button {
+  display: inline-block;
+  background-color: #f4511e;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.done {
+  display: inline-block;
+  text-decoration: line-through;
+}
+
 li {
   list-style-type: none;
   font-family: "Times New Roman", Times, serif;
