@@ -14,6 +14,7 @@ node.addEventListener('keydown', function (event) {
 
 function createTask (item) {
   let node = document.createElement('li')
+  node.class = "todo-tasks"
   let checkbox = createCheckbox(item)
   let label = createLabel(item)
   node.appendChild(checkbox)

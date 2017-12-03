@@ -40,7 +40,16 @@ button:hover {
   text-decoration: line-through;
 }
 
-li {
+.tasks-done {
+  list-style: none;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.tasks-done li:before {
+  content: '✓';
+}
+
+.todo-tasks {
   list-style-type: none;
   font-family: "Times New Roman", Times, serif;
 }
